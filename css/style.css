@@ -1,0 +1,221 @@
+/* the main configuration file for .root */
+:root {
+  font-size: 10px;
+  --clr-main: #003366;
+  --clr-title: #007acc;
+  --clr-txt: #333;
+  --clr-black: black;
+  --clr-white: #ffffff;
+  --clr-educ: rgba(20, 48, 139, 0.425);
+  --bx-shadow: 2px 2px 2px black;
+}
+
+body {
+  font-family: "Ubuntu Sans Mono", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  color: var(--clr-txt);
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* the main style of header only */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+  margin-inline: 0.3rem;
+  div.burger {
+    cursor: pointer;
+  }
+  div.open {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    background-color: #000000d0;
+    padding: 2rem;
+    ul li {
+      padding: 0.5rem;
+      a {
+        text-decoration: none;
+        color: var(--clr-white);
+      }
+    }
+    button {
+      position: absolute;
+      left: 2%;
+      top: 5px;
+      border-radius: 50%;
+      border: none;
+      color: var(--clr-white);
+      background-color: #000000d0;
+      cursor: pointer;
+    }
+  }
+  img {
+    max-width: 3.8rem;
+    border-radius: 50%;
+  }
+  > a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    color: var(--clr-black);
+  }
+  div.active {
+    display: block;
+  }
+}
+
+/* The main style of the main tag */
+main {
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+  }
+  #hero {
+    text-align: center;
+    background-color: var(--clr-title);
+    padding: 1rem;
+    font-size: 1.5rem;
+    padding-top: 0;
+    img {
+      max-width: 200px;
+      border-radius: 50%;
+      padding-bottom: 1rem;
+    }
+    div:first-of-type {
+      padding-block: 2rem;
+    }
+    div:last-of-type {
+      address {
+        padding-block: 1rem;
+        a {
+          color: var(--clr-white);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  /* section nth type of 2 */
+  section.dsp-grid {
+    font-size: 1.3rem;
+    article {
+      background-color: var(--clr-main);
+      margin: 1rem;
+      color: var(--clr-white);
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: var(--bx-shadow);
+      h4,
+      h5,
+      p,
+      strong {
+        padding-block: 0.5rem;
+      }
+    }
+  }
+  section.education {
+    article {
+      background-color: var(--clr-educ);
+      color: var(--clr-txt);
+    }
+  }
+  section#techno {
+    text-align: center;
+    ul.techno {
+      margin-inline: 9rem;
+    }
+  }
+  ul.list {
+    background: rgba(51, 117, 240, 0.63);
+    color: var(--clr-white);
+    padding: 1.5rem;
+    margin-inline: 3rem;
+    font-size: 1.2rem;
+    border-radius: 3rem;
+    box-shadow: var(--bx-shadow);
+    li {
+      padding: 0.5rem;
+      padding-bottom: 0;
+    }
+  }
+  section#lang {
+    margin-inline: 0;
+  }
+  section#refer {
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+    h3 {
+      grid-column: 1 / -1;
+    }
+    article {
+      background-color: #144d86be;
+      padding: 1rem;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+    form {
+      background-color: black;
+      color : var(--clr-white);
+      padding : 1rem;
+      margin-bottom : 1rem;
+      box-sizing: border-box;
+      input:not([type="checkbox"]), textarea {
+        box-sizing: border-box;
+        width: 100%;
+      }
+      label {
+        font-size: 1.2rem;
+      }
+      input, 
+      textarea, 
+      label {
+        margin-block: 1rem;
+      }
+    }
+    div.btn-center {
+      text-align: center;
+      button {
+        border : none;
+        border-radius: 2rem;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-white);
+  background: linear-gradient(to left, #0a3e6977 50%, #193369 75%);
+  padding: 1rem;
+  div a {
+    text-decoration: none;
+    color: var(--clr-white);
+  }
+}
