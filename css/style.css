@@ -68,6 +68,7 @@ nav {
     font-size: 1.3rem;
     padding-top: 1rem;
     color: var(--clr-black);
+    font-weight: 900;
   }
   div.active {
     display: block;
